@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n1, n2, divisor , dividend, rem;
+    printf("enter first number:");
+    scanf("%d", &n1);
+    
+    printf("enter second number:");
+    scanf("%d", &n2);
+    if(n1 > n2)
+    {
+        divisor = n2;
+        dividend = n1;
+    }
+    
+    else
+    {
+        divisor = n1;
+        dividend = n2;
+    }
+        
+    
+    
+    while(1)
+    {
+        rem = dividend % divisor;
+        if(rem != 0)
+        {
+            dividend = divisor;
+            divisor = rem;
+            
+            printf("divisor : %d\n",divisor);
+            printf("dividend : %d\n", dividend);
+        }
+        else
+        {
+            break;
+        }
+    }
+    printf("The HCF of the %d and %d : %d", n1, n2, divisor);
+    return 0;
+    getch();
+}
