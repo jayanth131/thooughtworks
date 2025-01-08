@@ -31,8 +31,6 @@ int main()
             dividend = divisor;
             divisor = rem;
             
-            printf("divisor : %d\n",divisor);
-            printf("dividend : %d\n", dividend);
         }
         else
         {
