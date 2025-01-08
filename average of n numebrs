@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n;
+    printf("enter how many numbers you want to find out average:");
+    scanf("%d", &n);
+    
+    int array[n], i, sum = 0;
+    float avg;
+    
+    for(i = 0; i < n;  i++)
+    {
+        printf("enter %d element of %d : ", i + 1, n);
+        scanf("%d", &array[i]);
+        sum = sum + array[i];
+    }
+    
+    avg = (float) sum / n;
+
+    printf("The average of %d numbers is: %f", n, avg);
+    
+    
+    return  0;
+    getch();
+}
