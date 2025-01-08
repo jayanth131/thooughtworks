@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main() 
+{
+    int n,reverse , m, rem;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+    m = n;
+    while(n != 0)
+    {
+        rem = n %  10;
+        reverse = reverse * 10 + rem;
+        n = n / 10;
+    }
+    if(reverse == m)
+    {
+        printf("The given is a palindrome number");
+    }
+    else
+    {
+       printf("The given is not a palindrome number");
+    }
+    return 0;
+    getch();
+}
