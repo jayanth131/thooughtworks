@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main() 
+{
+    int n,f1 = 0,f2=  1, f3, count = 0;
+    
+    
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+    
+    if(n == 1)
+    {
+       f3 = f1; 
+    }
+    else if(n == 2)
+    {
+        f3 = f2;
+    }
+    else
+    {
+        while(count < n-2)
+        {
+          f3 = f1 + f2;
+          f1  = f2;
+          f2 = f3;
+          count++;
+        }
+    }
+    
+    
+    printf("The %d  fabinoci number is  : %d", n, f3);
+    
+    
+    return 0;
+    getch();
+    
+    
+}
