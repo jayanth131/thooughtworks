@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main() 
+{
+    int n,sum_of_power , m, rem, digits = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+    m = n;
+    while(n != 0)
+    {
+        digits++;
+        
+        n = n/10;
+    }
+    
+    n = m;
+    while(n != 0)
+    {
+        rem = n %  10;
+        sum_of_power = sum_of_power + pow( rem, digits);
+        n = n / 10;
+    }
+    if(sum_of_power == m)
+    {
+        printf("The given is a armstrong number");
+    }
+    else
+    {
+       printf("The given is not a armstrong number");
+    }
+    return 0;
+    getch();
+}
